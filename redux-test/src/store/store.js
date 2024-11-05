@@ -1,0 +1,11 @@
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./counterSlice";
+import notesReducer from "./notesSlice";
+
+export const store = configureStore({
+  reducer: {
+    counterValue: counterReducer,
+    notes: notesReducer,
+  },
+});
+export default store;
